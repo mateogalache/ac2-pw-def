@@ -1,0 +1,53 @@
+.signInForm,.formSignUp{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 10rem;
+    gap: 1rem;
+}
+
+.center{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: translate(-50%,-50%);
+    top: 40%;
+    left: 50%;
+}
+
+.buttonSubmit{
+    width: 6rem;
+    margin-top: 1rem;
+}
+
+.notification{
+    position: fixed;
+    right: -27rem;
+    border: 1px solid black;
+    padding: 1rem;
+    animation: show 10s ease;
+}
+
+@keyframes show {
+    0%{
+        right: -27rem;
+    }
+    20%,80%{
+        right: 0;
+    }
+    100%{
+        right: -27rem;
+    }
+}
+
+.notification:after{
+    content: '';
+    position: absolute;
+    width: .5rem;
+    height: 100%;
+    top:0;
+    left:-1px;
+    background: red;
+}

@@ -1,0 +1,36 @@
+{% extends "base.twig" %}
+
+{% block title %}Sign-up | LSCoins{% endblock %}
+
+{% block content %}
+    <div class="center">
+        <h1>Sign up here!</h1>
+        <form data-cy="sign-up" action="{{ formAction }}" method="POST" class = "formSignUp">
+
+            <label> Email </label>
+            <input data-cy="sign-up__email" type="text" name="email" placeholder="Enter your email"
+                   value="{{ formData.email }}">
+            {% if formErrors['email'] %}
+                <p data-cy="sign-up__wrongEmail">{{ formErrors['email'] }}</p>
+            {% endif %}
+
+            <label> Password </label>
+            <input data-cy="sign-up__password" type="password" name="password" placeholder="Enter your password">
+            <label> Repeat Password </label>
+            <input data-cy="sign-up__repeatPassword" type="password" name="repeatPassword"
+                   placeholder="Repeat your password">
+            {% if formErrors['password'] %}
+                <p data-cy="sign-up__wrongPassword">{{ formErrors['password'] }}</p>
+            {% endif %}
+
+            <label> LSCoins to deposit </label>
+            <input data-cy="sign-up__coins" type="text" name="coins"
+                   value="{{ formData.coins }}"/>
+            {% if formErrors['coins'] %}
+                <p data-cy="sign-up__wrongCoins">{{ formErrors['coins'] }}</p>
+            {% endif %}
+
+            <input data-cy="sign-up__btn" type="submit" value="Sign-up">
+        </form>
+    </div>
+{% endblock %}
