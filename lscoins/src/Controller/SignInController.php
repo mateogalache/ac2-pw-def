@@ -44,8 +44,10 @@ final class SignInController
 
     public function uploadSignIn(Request $request, Response $response): Response
     {
-        $email = $_POST['email'];
-        $password = $_POST['password'];
+        $data = $request->getParsedBody();
+
+        $email = $data['email'];
+        $password = $data['password'];
 
         $formData = array (
             'email' => $email,

@@ -36,10 +36,13 @@ final class SignUpController
 
     public function uploadSignUp(Request $request, Response $response): Response
     {
-        $email = $_POST['email'];
-        $coins = $_POST['coins'];
-        $password = $_POST['password'];
-        $repeatedPassword = $_POST['repeatPassword'];
+
+        $data = $request->getParsedBody();
+
+        $email = $data['email'];
+        $coins = $data['coins'];
+        $password = $data['password'];
+        $repeatedPassword = $data['repeatPassword'];
         $formData = array (
             'email' => $email,
             'coins' => $coins,
@@ -52,16 +55,30 @@ final class SignUpController
         $formErrors['coins'] = $this->authCoins();
 
         if(!$formErrors['email'] && !$formErrors['password'] && (!$formErrors['coins'] || !$_POST['coins'])){
+            $formErrors['email'] = $this->repeatedEmail();
+            if (!$formErrors['email']){
+                $user = new User(
+                    $data['email'] ?? '',
+                    $data['password'] ?? '',
+                    $data['coins'] ?? '',
+                    new DateTime(),
+                    new DateTime()
+                );
+                $this->mysqlUserRepository->save($user);
+                return $response->withHeader('Location', '/sign-in')->withStatus(302);
+            }
+            else{
+                return $this->twig->render(
+                    $response,
+                    'sign-up.twig',
+                    [
+                        'formAction' => '/sign-up',
+                        'formData' => $formData,
+                        'formErrors' => $formErrors
+                    ]
+                );
+            }
 
-            $user = new User(
-                $_POST['email'] ?? '',
-                $_POST['password'] ?? '',
-                $_POST['coins'] ?? '',
-                new DateTime(),
-                new DateTime()
-            );
-            $this->mysqlUserRepository->save($user);
-            return $response->withHeader('Location', '/sign-in')->withStatus(302);
         }
         else{
             return $this->twig->render(
@@ -83,6 +100,16 @@ final class SignUpController
         }
         else if ($_POST['coins'] < 50 || $_POST['coins'] > 30000){
             return "Sorry, the number of LSCoins is either below or above the limits.";
+        }
+        else{
+            return null;
+        }
+    }
+
+    private function repeatedEmail(): ?string
+    {
+        if ($this->mysqlUserRepository->select()){
+            return "The email is already taken.";
         }
         else{
             return null;

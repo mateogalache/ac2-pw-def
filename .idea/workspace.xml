@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="99a0b410-2ede-4dd4-837e-f50527730f04" name="Changes" comment="" />
+    <list default="true" id="99a0b410-2ede-4dd4-837e-f50527730f04" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lscoins/cypress/cypress/tmp/dump.sql" beforeDir="false" afterPath="$PROJECT_DIR$/lscoins/cypress/cypress/tmp/dump.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lscoins/src/Controller/SignInController.php" beforeDir="false" afterPath="$PROJECT_DIR$/lscoins/src/Controller/SignInController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lscoins/src/Controller/SignUpController.php" beforeDir="false" afterPath="$PROJECT_DIR$/lscoins/src/Controller/SignUpController.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,6 +18,9 @@
   <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/ac2Lscoins/composer.json</pharConfigPath>
     <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -51,19 +59,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/mateo/Documents/lscoins",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/mateo/Documents/lscoins&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\mateo\Documents\lscoins\lscoins\src\Model\Repository" />
@@ -79,7 +87,11 @@
       <option name="presentableId" value="Default" />
       <updated>1681316422172</updated>
       <workItem from="1681316423276" duration="597000" />
-      <workItem from="1681317197969" duration="7123000" />
+      <workItem from="1681317197969" duration="7632000" />
+      <workItem from="1681374532519" duration="2283000" />
+      <workItem from="1681379355687" duration="27000" />
+      <workItem from="1681379547004" duration="872000" />
+      <workItem from="1681381340029" duration="768000" />
     </task>
     <servers />
   </component>
